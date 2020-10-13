@@ -17,4 +17,11 @@ jQuery(document).ready(function ($) {
     });
   }
   top_btn();
+  $('.hamburger').click(function (e) {
+    $('.block-menu').css('bottom', '0');
+  });
+  $('.close-menu').click(function () {
+    $('.block-menu').css('bottom', '140%');
+
+  });
 });
