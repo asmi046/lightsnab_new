@@ -24,4 +24,37 @@ jQuery(document).ready(function ($) {
     $('.block-menu').css('bottom', '140%');
 
   });
+  $('.slider-for').slick({
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    arrows: true,
+    fade: true,
+    prevArrow: '<div class="slider-arrow slider-arrow-prev"></div>',
+    nextArrow: '<div class="slider-arrow slider-arrow-next"></div>',
+    asNavFor: '.slider-nav'
+  });
+  $('.slider-nav').slick({
+    slidesToShow: 4,
+    slidesToScroll: 1,
+    asNavFor: '.slider-for',
+    centerPadding: '10px',
+    dots: true,
+    centerMode: true,
+    focusOnSelect: true,
+    responsive: [
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 3,
+        }
+    },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1
+        }
+    }
+  ]
+  });
 });
